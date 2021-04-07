@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melkam Ethiopia Cooking Box</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!--font awesome-->
+    <script src="https://kit.fontawesome.com/5f62cde495.js" crossorigin="anonymous"></script>
+    <!--CSS file link-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+</head>
+<body>
+    <!-- Navbar-->
+
+    <nav class="navbar navbar-expand-md bg-light navbar-light justify-content-center text-center">
+      <div class="navbar-center">
+        <!-- Brand -->
+        <a class="navbar-brand" href="/">
+            <img src="{{ url_for('static', filename='/images/Logo.png', alt='Melkam Ethiopia')}}">
+        </a>
+      
+        <!-- Toggler/collapsibe Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('shop') }}">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('ethiopianFood') }}">Ethiopian Food</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('about') }}">About Us</a>
+            </li>
+          </ul>
+          </div>
+              <div class="cart-btn">
+                <span class="nav-icon">
+                  <i class="fas fa-cart-plus"></i>
+                </span>
+                <div class="cart-items">0</div>
+              </div>        
+      </div>
+      </nav>
+
+      {% block content %}{% endblock %}
+
+     <!-- Payment Methods-->
+
+    <!-- Footer-->
+    <footer>
+      <div class="social-media-container">
+        <a href="https://www.facebook.com/Melkam-Ethiopia-Kochbox-102095498333811/" target="_blank" class="social-media-icon"><i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/melkamethiopia.kochbox/" target="_blank" class="social-media-icon"><i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UCeHjVgqnQH1bzNDNHHON8qQ" target="_blank" class="social-media-icon"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="legal-container">
+        <a href="https://www.melkamethiopia.de/impressium">   Impressum   </a>
+        <a href="https://www.melkamethiopia.de/agb">   AGB   </a>
+        <a href="https://www.melkamethiopia.de/data-protection">   Data Protection   </a>
+      </div>
+      <p>
+        <i class="fa fa-copyright" aria-hidden="true">   Frauke 2021</i>
+      </p>
+    </footer>
+
+    <script type=text/javascript src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
