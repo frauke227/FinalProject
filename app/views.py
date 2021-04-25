@@ -1,33 +1,32 @@
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, jsonify
 from app import app
+from contentful import Client
+
 
 @app.route('/')
 @app.route('/home')
 def index():
-	heading = "Python Tutorial"
-	subheading = "This is the subheading of our page"
-	return render_template('index.html', heading=heading, subheading=subheading)
+    heading = "Melkam Ethiopia Cooking Box"
+    subheading = "This is the subheading of our page"
+    return render_template('index.html', heading=heading, subheading=subheading)
+
 
 @app.route('/shop')
 def shop():
-	heading = "Python Tutorial"
-	subheading = "This is the subheading of our page"
-	return render_template('shop.html', heading=heading, subheading=subheading)
+    heading = "Shop | Melkam Ethiopia"
+    subheading = "This is the subheading of our page"
+    return render_template('shop.html', heading=heading, subheading=subheading)
 
-@app.route('/about')
+
+@ app.route('/about')
 def about():
-	heading = "Python Tutorial"
-	subheading = "This is the subheading of our page"
-	return render_template('about.html', heading=heading, subheading=subheading)
+    heading = "About | Melkam Ethiopia"
+    subheading = "This is the subheading of our page"
+    return render_template('about.html', heading=heading, subheading=subheading)
 
-@app.route('/ethiopianFood')
+
+@ app.route('/ethiopianFood')
 def ethiopianFood():
-	heading = "Python Tutorial"
-	subheading = "This is the subheading of our page"
-	return render_template('ethiopianFood.html', heading=heading, subheading=subheading)
-
-@app.route('/cart')
-def cart():
-	heading = "Python Tutorial"
-	subheading = "This is the subheading of our page"
-	return render_template('cart.html', heading=heading, subheading=subheading)
+    heading = "Ethiopian Food | Melkam Ethiopia"
+    subheading = "This is the subheading of our page"
+    return render_template('ethiopianFood.html', heading=heading, subheading=subheading)

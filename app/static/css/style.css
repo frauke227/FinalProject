@@ -19,21 +19,7 @@ body {
   font-family: "Lato", sans-serif;
 }
 
-.jumbotron {
-  background-color: #3c6f95;
-  text-align: center;
-  color: white;
-}
-
-.landingpage {
-  background-image: url("/static/images/ÄthiopischeKochbox.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: center;
-}
-
-/* --- Navbar---*/
-
+/* --------------- Navbar ---------------- */
 .navbar {
   position: sticky;
   top: 0;
@@ -41,11 +27,13 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  text-align: center;
   background: rgb(231, 226, 221);
   z-index: 1;
 }
 
+.navbar-brand img {
+  max-height: 40px;
+}
 .navbar-center {
   width: 100%;
   max-width: 1170px;
@@ -54,16 +42,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 1.5rem;
-  text-align: center;
 }
-.navbar-brand img {
-  max-height: 40px;
-}
-
 .nav-icon {
   font-size: 1.5rem;
+  float: right;
 }
-
 .cart-btn {
   position: relative;
   cursor: pointer;
@@ -77,11 +60,12 @@ body {
   border-radius: 30%;
   color: var(--mainWhite);
 }
+/* --------------- End of Navbar ---------------- */
 
+/* --------------- Hero ---------------- */
 .hero {
   min-height: calc(100vh - 60px);
-  background: url("/static/images/ÄthiopischeKochbox.jpg") center/cover
-    no-repeat;
+  background: url("../images/ÄthiopischeKochbox.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,15 +76,9 @@ body {
   display: inline-block;
   padding: 2rem;
 }
-.banner-title h1 {
+.banner-title {
   font-size: 3.4rem;
   text-transform: uppercase;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 1rem;
-}
-
-.banner-title h3 {
-  font-size: 2rem;
   letter-spacing: var(--mainSpacing);
   margin-bottom: 1rem;
 }
@@ -119,24 +97,24 @@ body {
   background: transparent;
   color: var(--primaryColor);
 }
+
+.banner h5 {
+  text-transform: capitalize;
+  margin-bottom: 1.2rem;
+}
 /* --------------- End of Hero ---------------- */
 
-.section-title h2 {
+/* Jumbotron */
+.jumbotron {
+  background-color: #3c6f95;
   text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 5rem;
-  margin-top: 3rem;
-  text-transform: capitalize;
-  letter-spacing: var(--mainSpacing);
+  color: white;
 }
 
-.section-listing ul {
-  text-align: center;
-  font-size: 1 rem;
-  letter-spacing: var(--mainSpacing);
-  margin-bottom: 30px;
+.jumbotron p {
+  font-size: 1.2rem;
 }
-
+/*End of Jumbotron*/
 /* --------------- Products ---------------- */
 
 .products {
@@ -198,7 +176,6 @@ body {
 }
 
 .product h3 {
-  text-transform: capitalize;
   font-size: 1.1rem;
   margin-top: 1rem;
   letter-spacing: var(--mainSpacing);
@@ -212,7 +189,106 @@ body {
   text-align: center;
 }
 
-/* ---------------End of Products */
+/* ---------------End of Products ---------------- */
+/* --------------- Cart ---------------- */
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--mainTransition);
+  background: rgb(240, 157, 81, 0.5);
+  z-index: 2;
+  visibility: hidden;
+}
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: 3;
+  background: rgb(231, 226, 221);
+  padding: 1.5rem;
+  transition: var(--mainTransition);
+  transform: translateX(100%);
+}
+.showCart {
+  transform: translateX(0);
+}
+.transparentBcg {
+  visibility: visible;
+}
+@media screen and (min-width: 768px) {
+  .cart {
+    width: 30vw;
+    min-width: 450px;
+  }
+}
+
+.close-cart {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+.cart h2 {
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 2rem;
+}
+/*---------- Cart Item -------------------- */
+.cart-item {
+  display: grid;
+  align-items: center;
+  grid-template-columns: auto 1fr auto;
+  grid-column-gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+.cart-item img {
+  width: 75px;
+  height: 75px;
+}
+.cart-item h4 {
+  font-size: 0.85rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+.cart-item h5 {
+  margin: 0.5rem 0;
+  letter-spacing: var(--mainSpacing);
+}
+.item-amount {
+  text-align: center;
+}
+.remove-item {
+  color: grey;
+  cursor: pointer;
+}
+.fa-chevron-up,
+.fa-chevron-down {
+  color: var(--primaryColor);
+  cursor: pointer;
+}
+/*---------- End of Cart Item -------------------- */
+
+.cart-footer {
+  margin-top: 2rem;
+  letter-spacing: var(--mainSpacing);
+  text-align: center;
+}
+.cart-footer h3 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+/* --------------- End of Cart ---------------- */
+
+/* Content */
+.content {
+  min-height: calc(100vh - 270px);
+}
 
 /* --- Footer */
 footer {
@@ -225,22 +301,127 @@ footer {
   margin-top: 30px;
   color: var(--primaryColor);
 }
-
+.payment-methods {
+  font-size: 2rem;
+  background-color: var(--mainGrey);
+  color: #3c6f95;
+  width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1.5rem;
+  margin-bottom: 20px;
+}
 .social-media-icon {
   font-size: 1.5rem;
   margin: 20px;
   color: var(--primaryColor);
 }
 
-.legal-container {
-  color: var(--primaryColor);
+.legal {
   width: 40%;
   min-height: 40px;
   margin: 10px;
   justify-content: space-evenly;
   display: flex;
+  color: var(--primaryColor);
 }
 
-.legal-container a:hover {
+.legal a {
+  color: var(--primaryColor);
+}
+
+.legal a:hover {
   color: var(--mainWhite);
+}
+
+/* section listing */
+.advantages {
+  text-align: center;
+  margin-left: 2rem;
+}
+
+.advantages h2,
+.recommendation h2,
+.explanation h1 {
+  color: var(--primaryColor);
+}
+.section-title h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 2rem;
+  text-transform: capitalize;
+  letter-spacing: var(--mainSpacing);
+}
+
+.section-listing ul {
+  font-size: 1.2rem;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 30px;
+  list-style-position: inside;
+  display: inline-block;
+  text-align: left;
+}
+
+.section-listing h4 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+/* How it works */
+.explanation h1 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.explanation i {
+  font-size: 2rem;
+  align-items: center;
+  margin: 1rem;
+}
+
+.explanation {
+  text-align: center;
+}
+
+.explanation p {
+  text-align: justify;
+  margin: 1rem;
+}
+
+.recommendation {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.recommendation img {
+  border-radius: 10%;
+  padding: 1.5rem;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* About Page */
+
+.about img {
+  object-fit: cover;
+  height: 50vh;
+  margin: 1.2rem;
+}
+
+.about {
+  background-color: var(--mainWhite);
+  text-align: center;
+  padding: 1rem;
+}
+
+.about p {
+  text-align: justify;
+}
+
+.about h1,
+.about h2 {
+  color: var(--primaryColor);
 }

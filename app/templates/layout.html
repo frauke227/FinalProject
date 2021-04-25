@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melkam Ethiopia Cooking Box</title>
+    <title>{{heading}}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -12,7 +12,7 @@
     <!--font awesome-->
     <script src="https://kit.fontawesome.com/5f62cde495.js" crossorigin="anonymous"></script>
     <!--CSS file link-->
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
     <!-- Navbar-->
@@ -20,8 +20,8 @@
     <nav class="navbar navbar-expand-md bg-light navbar-light justify-content-center text-center">
       <div class="navbar-center">
         <!-- Brand -->
-        <a class="navbar-brand" href="/">
-            <img src="{{ url_for('static', filename='/images/Logo.png', alt='Melkam Ethiopia')}}">
+        <a class="navbar-brand" href="/"><img src="{{ url_for('static', filename='/images/Logo.png', alt='Melkam Ethiopia')}}">
+            
         </a>
       
         <!-- Toggler/collapsibe Button -->
@@ -51,30 +51,49 @@
               </div>        
       </div>
       </nav>
+      <div class=" content">
 
       {% block content %}{% endblock %}
+
+      </div>
 
      <!-- Payment Methods-->
 
     <!-- Footer-->
-    <footer>
+    <footer class="navbar-static-bottom">
+      <div class="payment-methods">
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+      </div>
       <div class="social-media-container">
-        <a href="https://www.facebook.com/Melkam-Ethiopia-Kochbox-102095498333811/" target="_blank" class="social-media-icon"><i class="fab fa-facebook"></i>
+        <a href="https://www.facebook.com/Melkam-Ethiopia-Kochbox-102095498333811/" target="_blank"
+          class="social-media-icon"><i class="fab fa-facebook"></i>
         </a>
-        <a href="https://www.instagram.com/melkamethiopia.kochbox/" target="_blank" class="social-media-icon"><i class="fab fa-instagram"></i>
+        <a href="https://www.instagram.com/melkamethiopia.kochbox/" target="_blank" class="social-media-icon"><i
+            class="fab fa-instagram"></i>
         </a>
-        <a href="https://www.youtube.com/channel/UCeHjVgqnQH1bzNDNHHON8qQ" target="_blank" class="social-media-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.youtube.com/channel/UCeHjVgqnQH1bzNDNHHON8qQ" target="_blank" class="social-media-icon"><i
+            class="fab fa-youtube"></i></a>
       </div>
-      <div class="legal-container">
-        <a href="https://www.melkamethiopia.de/impressium">   Impressum   </a>
-        <a href="https://www.melkamethiopia.de/agb">   AGB   </a>
-        <a href="https://www.melkamethiopia.de/data-protection">   Data Protection   </a>
+      <div class="container legal">
+        <div class="row justify-content-md-center">
+          <div class="col-md-auto">
+            <a href="https://www.melkamethiopia.de/impressium"> Impressum </a>
+          </div>
+          <div class="col-md-auto">
+            <a href="https://www.melkamethiopia.de/agb"> AGB </a>
+          </div>
+          <div class="col-md-auto">
+            <a href="https://www.melkamethiopia.de/data-protection"> Data Protection </a>
+          </div>
+        </div>
       </div>
-      <p>
-        <i class="fa fa-copyright" aria-hidden="true">   Frauke 2021</i>
-      </p>
+      <p><i class="fa fa-copyright" aria-hidden="true"> Frauke 2021</i></p>
     </footer>
-
+    <!--contentful-->
+    <script src="https://cdn.jsdelivr.net/npm/contentful@latest/dist/contentful.browser.min.js"></script>
+    <!--Javascript-->
     <script type=text/javascript src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>

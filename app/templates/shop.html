@@ -2,198 +2,67 @@
 
 {% block content %}
     <div class="jumbotron">
-        <h1>Melkam Ethiopia Cooking Box</h1>
-        <h3>Tena Ystelin - Welcome to our Online Shop</h3>
+        <h4>ጤና ይስጥልን (Tena Ystelin) - Welcome!</h4>
+        <br>
+        <h1>Discover our Cooking Boxes</h1>
+        <br> <br>
+        <p> For our meat-free boxes you can chose whether you want to eat <strong>vegetarian</strong> or
+            <strong>vegan</strong>.</p>
     </div>
 
- <section class="products">
-     <div class="products-center">
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/Shiro.jpg', alt='Shiro')}}" class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Shiro</h3>
-            <h4>from 10,99 €</h4>
-        </article>
-
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/MisrWot.jpg', alt='MisrWot')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Misr Wot with Tiqil Gomen</h3>
-            <h4>from 10,99 €</h4>
-        </article>
- 
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/KikWot.jpg', alt='KikWpt')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Kik Wot with Keysir</h3>
-            <h4>from 9,99 €</h4>
-        </article>
-
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/KeyWot.jpg', alt='KeyWot')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Key Wot with Gomen</h3>
-            <h4>from 10,99 €</h4>
-        </article>
-
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/DoroWot.jpg', alt='Doro Wot')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Doro Wot</h3>
-            <h4>from 11,99 €</h4>
-        </article>
-
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/Beyaynetu.jpg', alt='Beyaynetu')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Beyaynetu</h3>
-            <h4>24,99 €</h4>
-        </article>
+    <!--products-->
+    <section class="products">
     
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/Mehaberawi.jpg', alt='Mehaberawi')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Mehaberawi</h3>
-            <h4>24,99 €</h4>
-        </article>
-
-        <article class="product">
-            <div class="img-container">
-                <img src="{{ url_for('static', filename='/images/Gutschein.jpg', alt='Gutschein')}}"
-                    class="product-img">
-                <button class="bag-btn" data-id="1">
-                    <i class="fas fa-shopping-cart">add to bag</i>
-                </button>
-            </div>
-            <h3>Gift Card</h3>
-            <h4>from 10,00 €</h4>
-        </article>
-    </div>
-</section>
-
- <!--
-
-    <div class="products card-deck">
-        <div class="card" >
-            <img src="/images/Shiro With Tomato Salad.jpg" class="card-img-top " alt="Shiro">
-            <div class="card-body">
-                <h5 class="card-title">Shiro Wot with Tomato Salat</h5> <br>
-                <h6>from 10.99€</h6> <br>
-                <p class="card-text">Shiro is an Ethiopian classic and the national vegetarian dish. Not only is this chickpea curry the most popular dish in Ethiopia, it’s also super quick and easy to prepare. All of this makes it the per-fect fast food and an ideal fasting food for the Ethiopian Ortho-dox, who abstain from eating animal products for about 180 days of the year!</p>
-                <a href="#" class="btn btn-primary" id="Shiro">Add to cart</a>
-            </div>
+        <div class="products-center">
+            <!--single product as reference: 
+                
+            <article class="product">
+                <div class="img-container">
+                    <img src="/images/Beyaynetu.jpg" alt="Beyaynetu" class="product-img">
+                    <button class="bag-btn" data-id="1">
+                        <i class="fas fa-shopping-cart">add to bag</i>
+                    </button>
+                </div>
+                <h3>Beyaynetu</h3>
+                <h4>24,99 €</h4>
+            </article>
+            
+            end of single product-->
         </div>
-        <div class="card" >
-            <img src="/images/lentils_cabbage.jpg" class="card-img-top" alt="Misr Wot">
-            <div class="card-body">
-                <h5 class="card-title">Misr Wot with Tiqil Gomen</h5>
-                <br>
-                <h6>from 10.99€</h6> <br>
-                <p class="card-text">Misir Wot is one of Ethiopia’s most popular vegetarian dishes. The lentils are prepared in a very unique way and combined with Ethi-opian cabbage (Tiqil Gomen), it’s pure joy for the taste buds. Veg-gie/vegan-friendly and so yummy that even meat lovers won’t want to miss out on it!</p> <br>
-                <a href="#" class="btn btn-primary" id="Misr">Add to cart</a>
+    </section>
+    <!--end of products-->
+    <!--cart-->
+    <div class="cart-overlay">
+        <div class="cart">
+            <span class="close-cart">
+                <i class="fas fa-window-close"></i>
+            </span>
+            <h2>your cart</h2>
+            <div class="cart-content">
+                <!-- cart item
+                <div class="cart-item">
+                    <img src="/images/Beyaynetu.jpg" alt="Beyaynetu">
+                    <div>
+                        <h4> Beyaynetu</h4>
+                        <h5>24,99 €</h5>
+                        <span class="remove-item">remove</span>
+                    </div>
+                    <div>
+                        <i class="fas fa-chevron-up"></i>
+                        <p class="item-amount">1</p>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+                end if cart item-->
             </div>
-        </div>
-        <div class="card" >
-            <img src="/images/Kik Wot.jpg" class="card-img-top" alt="Kik Wot">
-            <div class="card-body">
-                <h5 class="card-title">Kik Wot with Keysir</h5>
-                <br>
-                <h6>from 9.99€</h6> <br>
-                <p class="card-text">Kik Wot with keysir (beetroot) is one of our favorite dishes. The yellow split pea curry is milder than many other Ethiopian dishes and the added touch of beetroot creates a real explosion of flavor and a vibrant looking dish. We hope you love it as much as we do!</p> <br>
-                <a href="#" class="btn btn-primary" id="Kik">Add to cart</a>
-            </div>
-        </div>
-        <div class="card" >
-            <img src="/images/Key Wot.jpg" class="card-img-top" alt="Key Wot">
-            <div class="card-body">
-                <h5 class="card-title">Key Wot with Gomen</h5>
-                <br>
-                <h6>from 10.99€</h6> <br>
-                <p class="card-text">Key Wot or beef stew is a popular meat dish that Ethiopians love to eat when they’re not fasting. Even though it can be enjoyed as an everyday dish, it’s also common for this tasty and hearty stew to be served on special occasions.</p> <br>
-                <a href="#" class="btn btn-primary" id="KeyWot">Add to cart</a>
+            <div class="cart-footer">
+                <h3>your total:€ <span class="cart-total">0</span></h3>
+                <button class="clear-cart banner-btn">clear cart</button>
             </div>
         </div>
     </div>
-    <div class="products card-deck">
-        <div class="card" >
-            <img src="/images/Doro Wot.jpg" class="card-img-top" alt="Doro Wot">
-            <div class="card-body">
-                <h5 class="card-title">Doro Wot</h5>
-                <br>
-                <h6>from 11.99€</h6> <br>
-                <p class="card-text">In Ethiopia, a holiday without Doro Wot is hard to imagine. This festive specialty takes some time to prepare, but the taste experience ideally shared with friends or family is absolutely worth it.</p> <br>
-                <a href="#" class="btn btn-primary" id="DoroWot">Add to cart</a>
-            </div>
-        </div>
+    <!--end of cart-->
 
-        <div class="card" >
-            <img src="/images/Beyaynetu_.jpg" class="card-img-top" alt="Beyaynetu">
-            <div class="card-body">
-                <h5 class="card-title">Beyaynetu</h5>
-                <br>
-                <h6>24.99€</h6> <br>
-                <p class="card-text">Beyaynetu - or the vegetarian combination of different sauces – is a very popular dish and can be found everywhere in Ethiopia on fasting days. Due to the variety of dishes, you will need some time to prepare, but you will be rewarded with a varied and very tasty meal for you and your family or friends.</p> <br>
-                <a href="#" class="btn btn-primary" id="Beyaynetu">Add to cart</a>
-            </div>
-        </div>
-
-        <div class="card" >
-            <img src="/images/Mehaberawi.jpg" class="card-img-top" alt="Mehaberawi">
-            <div class="card-body">
-                <h5 class="card-title">Mehaberawi</h5>
-                <br>
-                <h6>24.99€</h6> <br>
-                <p class="card-text">Ethiopians love to combine different wots (stews) and have a spe-cial dish on their menu: Mehaberawi. Due to the variety of dishes - this Mehaberawi consists of key wot (beef), shiro wot (chickpea stew), misr wot (red lentils), keysir (beetroot) and gomen (collard greens) - you will need some time for preparation, but you will be rewarded with a varied and very tasty meal for you and your fam-ily or friends.</p> <br>
-                <a href="#" class="btn btn-primary" id="Mehaberawi">Add to cart</a>
-            </div>
-        </div>
-
-        <div class="card" >
-            <img src="/images/Gutschein Melkam Ethiopia.jpg" class="card-img-top" alt="Gift card">
-            <div class="card-body">
-                <h5 class="card-title">Gift Card</h5>
-                <br>
-                <h6>from 10.00 €</h6> <br>
-                <p class="card-text"> Choose the amount. When paying you can add a personalized message. The gift card will be send by email either to you or directly to the receipient.</p> <br>
-                <a href="#" class="btn btn-primary" id="giftCard">Add to cart</a>
-            </div>
-        </div>
-    </div>
-    -->
 
     {% endblock content %}
     
